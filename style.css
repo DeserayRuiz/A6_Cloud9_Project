@@ -43,4 +43,27 @@ footer li {
     display:inline; 
 }
 
-</style>
+.code {
+	//text-align: center;
+	font-size: 1.1em;
+	margin-top: 10px;
+	font-weight: bold;
+	width:564px;
+	margin:auto;
+	background:white;
+	overflow:hidden;
+	background:rgba(250,250,250,.94);
+}
+
+.tab {
+	//text-align: center;
+	text-indent: 40px;
+	font-size: 1.1em;
+	margin-top: 10px;
+	font-weight: bold;
+	width:564px;
+	margin:auto;
+	background:white;
+	overflow:hidden;
+	background:rgba(250,250,250,.94);
+}
