@@ -38,32 +38,32 @@ Let’s get started by creating a Cloud9 account:
 
 </p>
 <ol>
-  <li>  https://aws.amazon.com/cloud9/?origin=c9io </li>
-  <li>  Click “Get started with AWS Cloud9.” </li> 
+  <li class="instructions"> In your web browser, navigate to: https://aws.amazon.com/cloud9/?origin=c9io </li>
+  <li class="instructions">  Click “Get started with AWS Cloud9.” </li> 
   <img src="images/signup1.png" alt="signup logo">
-  <li>  Sign into your AWS account if you have one or create an AWS account. After this step you’ll be redirected to setup your Cloud9 account. </li>
+  <li class="instructions">  Sign into your AWS account if you have one or create an AWS account. After this step you’ll be redirected to setup your Cloud9 account. </li>
   <img src="images/signup2.png" alt="Create an AWS Account screen shot">
-  <li>  Input your credit card information. </li>
-  <li>   Link your github and AWS accounts if you’d like to, and verify your information and email address is valid. </li>
+  <li class="instructions">  Input your credit card information. </li>
+  <li class="instructions">   Link your github and AWS accounts if you’d like to, and verify your information and email address is valid. </li>
   <img src="images/signup3.png" alt="Screenshot of linking services">
-  <li>   You’re all done! Enjoy Cloud 9. </li>
+  <li class="instructions">   You’re all done! Enjoy Cloud 9. </li>
 </ol>
 
 <h2>Let's Get Started with Python and Django!</h2>
-<p> Execute these following steps to create you first Django and Python App! <P>
 <ol>
-<li> Sign up for a basic free Cloud 9 account </li>
-<li> Create a workspace.  You can name the workspace whatever you'd like and give it whatever description you'd like.  The important part while creating a workspace is to choose the Django template. Once you've filled out the appropriate fields and selected the Django Template, click the create workspace button at the bottom of the page.   </li>
+<li class="instructions">Execute these following steps to create you first Django and Python App!</li>
+<li class="instructions"> Sign up for a basic free Cloud 9 account </li>
+<li class="instructions"> Create a workspace.  You can name the workspace whatever you'd like and give it whatever description you'd like.  The important part while creating a workspace is to choose the Django template. Once you've filled out the appropriate fields and selected the Django Template, click the create workspace button at the bottom of the page.   </li>
 <img src="images/create_workspace.PNG" alt="create workspace screenshot">
-<li> At the bottom of your new Cloud 9 workspace is a tab that says bash which is followed by so other text.  Click into this and type the following:
+<li class="instructions"> At the bottom of your new Cloud 9 workspace is a tab that says bash which is followed by some other text.  Click into this and type the following:
   <p class="code">django-admin startproject project </p> .  You can name your project whatever you'd like.  The name of your project will take the place of 'project' in the given command.  You have now created the template of you Django and Python application. 
 </li>
 <img src="images/step_2.PNG" alt="new Cloud9 workspace screenshot">
-<li>
+<li class="instructions">
 On the left hand side of you cloud 9 screen is a file directory of your workspace files.  When you created a project in the last step a new set of files were created under the directory of the name you gave your project. Navigate into the directory of the project you just created with the command line.  Type the following command and then execute it: 
   <p class="code">python manage.py startapp helloWorld </p>  
 </li>
-<li>  you new app, helloWorld will have a directory with a .py file called views.py.  Open this file up and paste in the following code.  
+<li class="instructions">  your new app, helloWorld will have a directory with a .py file called views.py.  Open this file up and paste in the following code.  
 <p class="code">from django.http import HttpResponse <br/>
 
 
@@ -73,12 +73,12 @@ def index(request):
 </p>
 </li>	
 <img src="images/step_3.PNG" alt="Python Code Screenshot">
-<li>
+<li class="instructions">
 in the same directory as the views.py file you just modified create a new file called urls.py. and type the following code into that new file: 
 <p class="code">
-from django.conf.urls import url
+from django.conf.urls import url </br>
 
-from . import views
+from . import views  </br>
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -86,20 +86,20 @@ urlpatterns = [
 </p>
 </li>
 <img src="images/step_4.PNG" alt="URLS.PY code Screenshot">
-<li>
+<li class="instructions">
 Back in you project folder, the one the was created when you executed your first command prompt line, open up the urls.py file.  Delete whatever code is in the file and copy paste the following code into the file.  
 <p class="code">
 from django.conf.urls import include, url </br>
 from django.contrib import admin </br></br>
 
 urlpatterns = [ </br>
-    url(r'^polls/', include('polls.urls')), </br>
+    url(r'^helloWorld/', include('helloWorld.urls')), </br>
     url(r'^admin/', admin.site.urls),
 ]
 </p>
 </li>
 <img src="images/step_5.PNG" alt="URLS.PY code Screenshot">
-<li>
+<li class="instructions">
 Now, in your command prompt, make sure you are in the directory of your project and type the following command: 
 <p class="code">
 python manage.py runserver $IP:$PORT
